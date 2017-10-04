@@ -1,13 +1,19 @@
 public class Motorcycle : Vehicle{
-	var make:String
-	var plate:String
-	var feature1:String?
-	var feature2:String?
+	var numWheels:Int
 
-	init(){
-		make = ""
-		plate=""
-		feature1=""
-		feature2=""
+	override init(){
+		numWheels = 2
+
+		super.init();
+	}
+
+	init(_make:String,_plate:String,_numWheels:Int = 2){
+		numWheels = _numWheels
+		super.init(_make,_plate);
+	}
+
+	override func returnData() -> String {
+		var t:String = super.returnData()\(numWheels)
+		return t
 	}
 }
