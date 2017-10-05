@@ -3,17 +3,17 @@ public class Motorcycle : Vehicle{
 
 	override init(){
 		numWheels = 2
-
 		super.init();
 	}
 
 	init(_make:String,_plate:String,_numWheels:Int = 2){
 		numWheels = _numWheels
-		super.init(_make,_plate);
+        super.init(pMake: _make,pPlate: _plate);
 	}
 
+    //overrides returnData to return generic vehicle data as well as motorcycle data
 	override func returnData() -> String {
-		var t:String = super.returnData()\(numWheels)
+        let t = "\(super.returnData())\nwheels: \(numWheels)"
 		return t
 	}
 }

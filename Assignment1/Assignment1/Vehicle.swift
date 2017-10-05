@@ -15,7 +15,8 @@ public class Vehicle {
     }
 
     func returnData()->String{
-    	var t:String = "make: "\(make)\"\nplate: "\(plate)
-    	return t
+        //returns make and plate to be played with later
+        let t = "make: \(make)\nplate: \(plate)"
+        return t
     }
 }
