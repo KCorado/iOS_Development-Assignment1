@@ -36,8 +36,4 @@ public class PartTime: Employee {
         print ("Rate: \(hourlyRate)")
         print ("Hours Worked: \(numberHoursWorked)")
     }
-    
-    
-    
-    
 }

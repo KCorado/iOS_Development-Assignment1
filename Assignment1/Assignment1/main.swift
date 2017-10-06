@@ -17,7 +17,7 @@ ft1.salary = 50000
 ft1.bonus = 2000
 
 //Creating a vehicle for the employee, and associating it to the employee
-var vRef = Vehicle(pMake: "Ferrari",pModel: "458")
+var vRef = Vehicle(pMake: "Ferrari",pPlate: "458")
 ft1.v = vRef
 
 //Adding the fulltime employee to the array
@@ -30,7 +30,7 @@ aEmp.append(ft1)
 var pt1 : PartTime
 
 //Creating the car to associate to the employee
-vRef = Vehicle(pMake: "Porsche", pModel: "Carrera")
+vRef = Vehicle(pMake: "Porsche", pPlate: "Carrera")
 
 //Defining the employee, adding the employee's information
 pt1 = PartTime(ppName: "Matthew", ppAge: 10, pHourlyRate: 100, pNumberHoursWorked: 2, ppV: vRef)
@@ -42,7 +42,9 @@ aEmp.append(pt1)
 
 //------Employee3 - Intern
 //Creating the car to associate to the employee
-vRef = Vehicle(pMake: "BMW", pModel: "X6")
+//vRef = Vehicle(pMake: "BMW", pPlate: "X6")
+vRef = Motorcycle(pMake: "Harley", pPlate: "P0UND1NG 1T")
+
 
 //Creating and defining the first intern employee, adding the employee's information
 var it1 = Intern(pName: "Loonie", pAge: 15, pSchool: "WoofCenter", ppV: vRef)
@@ -81,9 +83,13 @@ for i in 0..<aEmp.count {
     if (e.v == nil) {
         print ("** Employee has not registered any vehicle ***")
     } else {
+        //casting the vehicle as a motorcycle in this case so we can see the fucking parameters
+        if let emCar = e.v! as? Motorcycle{
+            print(emCar.numWheels)
+        }
         print ("*** Employe has a Vehicle")
         print ("Make: \(e.v!.make)")
-        print ("Model: \(e.v!.model)")
+        print ("Model: \(e.v!.plate)")
     }
     print ("Birth Year: " + String(e.calcBirthYear()))
     print ("Earnings: \(earn)")
