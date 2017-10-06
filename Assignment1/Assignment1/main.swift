@@ -1,3 +1,15 @@
+/*
+ Shit to do:
+ (delete them as we complete them)
+ -implement two new vehicle child classes (car and motorcycle) with two unique attributes each - Lopez
+ -implement two new partTime child classes (fixed and comission based)
+ with different calcEarnings method for each - Corado
+ -implement swift protocol IPrintable with single method printMyData which returns string
+ -very class MUST adopt the protocol IPrintable and return a printable version of their properties
+ -use getters and setters for every class to expose only what's needed when it's needed
+ -test output with at least two objects
+ */
+
 //--------------------------------------------//
 //Data creation for the employees to be created
 
