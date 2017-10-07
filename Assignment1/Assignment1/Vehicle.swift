@@ -1,4 +1,9 @@
-public class Vehicle {
+public class Vehicle : IPrintable{
+    //function stub for IPrintable
+    func printMyData() {
+        //nothing here for now
+    }
+    
     public var make: String
     public var plate: String
     
@@ -19,4 +24,6 @@ public class Vehicle {
         let t = "make: \(make)\nplate: \(plate)"
         return t
     }
+    
+    
 }

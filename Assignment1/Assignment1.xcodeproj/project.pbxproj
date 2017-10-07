@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F00AA961F86FC00007AE19B /* Motorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F00AA951F86FC00007AE19B /* Motorcycle.swift */; };
 		3F00AA981F86FC08007AE19B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F00AA971F86FC08007AE19B /* Car.swift */; };
+		3FBE3B1A1F885227006C6026 /* IPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE3B191F885227006C6026 /* IPrintable.swift */; };
 		AE6ADF791F7C54C20095A868 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF731F7C54C20095A868 /* Employee.swift */; };
 		AE6ADF7A1F7C54C20095A868 /* FullTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF741F7C54C20095A868 /* FullTime.swift */; };
 		AE6ADF7B1F7C54C20095A868 /* Intern.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF751F7C54C20095A868 /* Intern.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		3F00AA951F86FC00007AE19B /* Motorcycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Motorcycle.swift; sourceTree = "<group>"; };
 		3F00AA971F86FC08007AE19B /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		3FBE3B191F885227006C6026 /* IPrintable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPrintable.swift; sourceTree = "<group>"; };
 		AE1C50101F7C2FB300CBA3F6 /* Assignment1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment1; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6ADF731F7C54C20095A868 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		AE6ADF741F7C54C20095A868 /* FullTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullTime.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				AE6ADF761F7C54C20095A868 /* main.swift */,
 				AE6ADF771F7C54C20095A868 /* PartTime.swift */,
 				AE6ADF781F7C54C20095A868 /* Vehicle.swift */,
+				3FBE3B191F885227006C6026 /* IPrintable.swift */,
 			);
 			path = Assignment1;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				AE6ADF7E1F7C54C20095A868 /* Vehicle.swift in Sources */,
 				AE6ADF791F7C54C20095A868 /* Employee.swift in Sources */,
 				3F00AA981F86FC08007AE19B /* Car.swift in Sources */,
+				3FBE3B1A1F885227006C6026 /* IPrintable.swift in Sources */,
 				AE6ADF7B1F7C54C20095A868 /* Intern.swift in Sources */,
 				AE6ADF7C1F7C54C20095A868 /* main.swift in Sources */,
 				AE6ADF7D1F7C54C20095A868 /* PartTime.swift in Sources */,
