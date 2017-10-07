@@ -1,4 +1,4 @@
-public class Employee {
+public class Employee : IPrintable{
     public var name: String
     public var  age: Int
     public var v: Vehicle? // optional
@@ -47,6 +47,7 @@ public class Employee {
         return 1000.00
     }
     
+    //TODO:reimplement this to use iprintable and getters/setters
     //function to print data (all employees inherit this, will be overridden)
     func printMyData() {
         print ("Name: \(name)")

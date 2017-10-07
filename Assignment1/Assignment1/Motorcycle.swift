@@ -1,4 +1,4 @@
-public class Motorcycle : Vehicle {
+public class Motorcycle : Vehicle{
 	public var numWheels:Int
 
     /*
@@ -12,6 +12,10 @@ public class Motorcycle : Vehicle {
     override init() {
         numWheels = 2
         super.init()
+    }
+    
+    override func printMyData() {
+        //some code here eventually
     }
     
     override init(pMake: String, pPlate: String) {

@@ -1,5 +1,3 @@
-
-
 public class PartTime: Employee {
     
     public var hourlyRate : Int

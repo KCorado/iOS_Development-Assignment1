@@ -1,7 +1,8 @@
 public class Car : Vehicle{
-	var numWheels:Int
+    var numWheels:Int
 
-	init(){
+    override init(){
 		numWheels = 4
+        super.init()
 	}
 }
