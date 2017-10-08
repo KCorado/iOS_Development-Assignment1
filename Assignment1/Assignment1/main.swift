@@ -28,6 +28,10 @@ ft1.age = 20
 ft1.salary = 50000
 ft1.bonus = 2000
 
+var test = Motorcycle()
+test.make = "Harley"
+test.plate = "P0UND1NG 1T"
+
 //Creating a vehicle for the employee, and associating it to the employee
 var vRef = Vehicle(pMake: "Ferrari",pPlate: "458")
 ft1.v = vRef

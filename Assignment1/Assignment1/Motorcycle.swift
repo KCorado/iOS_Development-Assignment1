@@ -1,6 +1,14 @@
 public class Motorcycle : Vehicle{
-	public var numWheels:Int
-
+    
+    private var _numWheels:Int = 2
+    
+    public var numWheels:Int{
+        get{return _numWheels}
+        set{
+            _numWheels = 0
+        }
+    }
+    
     /*
      basically with getters and setters you need to make new
      variables for each getter and setter and this shit's a pain
@@ -8,19 +16,17 @@ public class Motorcycle : Vehicle{
      E V E R Y   F U C K I N G   C L A S S
      */
     
-    //override constructor
-    override init() {
-        numWheels = 2
+    //ok this should be how it looks, I think. Probably.
+    //send help
+    
+    override init(){
         super.init()
+        self._numWheels = 2
     }
     
-    override func printMyData() {
+    override func printMyData() ->String{
         //some code here eventually
-    }
-    
-    override init(pMake: String, pPlate: String) {
-        self.numWheels = 2
-        super.init(pMake: pMake, pPlate: pPlate)
+        return returnData()
     }
     
     //overrides returnData to return generic vehicle data as well as motorcycle data
