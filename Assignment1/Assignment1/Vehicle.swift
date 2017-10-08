@@ -14,14 +14,14 @@ public class Vehicle : IPrintable{
     
     public var make: String{
         get{return _make}
-        set{_make = make}
+        set(vehicleMake){_make = vehicleMake}
     }
     
     
     public var plate: String{
         get{return _plate}
-        set{
-            _plate = plate
+        set(plateValue){
+            _plate = plateValue
         }
     }
     
