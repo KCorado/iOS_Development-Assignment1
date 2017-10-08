@@ -5,7 +5,7 @@ public class Motorcycle : Vehicle{
     public var numWheels:Int{
         get{return _numWheels}
         set{
-            _numWheels = 0
+            _numWheels = 2
         }
     }
     
