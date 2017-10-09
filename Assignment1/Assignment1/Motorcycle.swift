@@ -1,6 +1,12 @@
 public class Motorcycle : Vehicle{
     
     private var _numWheels:Int = 2
+    private var _requireHelmet:Bool = true
+    
+    public var requireHelmet:Bool{
+        get{return _requireHelmet}
+        set{_requireHelmet = true}
+    }
     
     public var numWheels:Int{
         get{return _numWheels}
@@ -9,19 +15,10 @@ public class Motorcycle : Vehicle{
         }
     }
     
-    /*
-     basically with getters and setters you need to make new
-     variables for each getter and setter and this shit's a pain
-     in the anus since its needed for
-     E V E R Y   F U C K I N G   C L A S S
-     */
-    
-    //ok this should be how it looks, I think. Probably.
-    //send help
-    
     override init(){
         super.init()
         self._numWheels = 2
+        self._requireHelmet = true
     }
     
     override func printMyData() ->String{
@@ -31,7 +28,7 @@ public class Motorcycle : Vehicle{
     
     //overrides returnData to return generic vehicle data as well as motorcycle data
 	override func returnData() -> String {
-        let t = "\(super.returnData())\nwheels: \(numWheels)"
+        let t = "\(super.returnData())\nNumber of Wheels: \(numWheels)\nRequired Personal Protection: \(requireHelmet)"
 		return t
 	}
 }
