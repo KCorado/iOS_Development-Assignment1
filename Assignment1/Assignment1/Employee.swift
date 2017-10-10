@@ -1,45 +1,49 @@
 public class Employee : IPrintable{
-    public var name: String
-    public var  age: Int
-    public var v: Vehicle? // optional
+    private var _name: String
+    private var _age: Int
+    private var _vehicle: Vehicle
     
-    
-//    func setAge(pAge: Int) {
-//        if pAge >= 0 {
-//           age = pAge
-//        } else {
-//            age = 0
-//        }
-//    }
-//    
-//    func getAge() -> Int {
-//        return self.age
-//    }
-    
-    //empty constructor for employee name age and v (vehicle)
-    init() {
-        name = ""
-        age = 0
-        v = nil
-    }
-
-    //constructor for employee
-    init (_ pName: String,_ pAge: Int) {
-        name = pName
-        age = pAge
-        v = nil
+    //initializer for class
+    init(){
+        self._name = ""
+        self._age = 0
+        self._vehicle = Vehicle()
     }
     
-    //employee constructor that has vehicle
-    init (_ pName: String,_ pAge: Int, _ pV: Vehicle) {
-        name = pName
-        age = pAge
-        v = pV
+    
+    //getter/setter for name
+    public var name: String {
+        get {
+            return _name
+        }
+        set(inputName) {
+            _name = inputName
+        }
+    }
+    
+    //getter/setter for age
+    public var age: Int {
+        get {
+            return _age
+        }
+        set(inputAge) {
+            _age = inputAge
+        }
+    }
+    
+    //getter/setter for vehicle
+    public var vehicle: Vehicle {
+        get {
+            return _vehicle
+        }
+        set(inputVehicle) {
+            _vehicle = inputVehicle
+        }
     }
     
     //function to calculate birth year (inherited by all employees)
     func calcBirthYear() -> Int {
-        return (2017 - self.age)
+        return (2017 - self._age)
     }
     
     //function to calculate earnings (all employees inherit this)
@@ -47,11 +51,15 @@ public class Employee : IPrintable{
         return 1000.00
     }
     
-    //TODO:reimplement this to use iprintable and getters/setters
+    //inherited function from protocol IPrintable
+    func printMyData() -> String {
+        return returnData()
+    }
+    
     //function to print data (all employees inherit this, will be overridden)
-    func printMyData() {
-        print ("Name: \(name)")
-        print ("Age: \(age)")
+    func returnData() -> String{
+        //returns make and plate to be played with later
+        return "null"
     }
     
 }
