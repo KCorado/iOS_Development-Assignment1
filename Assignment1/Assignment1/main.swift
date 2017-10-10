@@ -1,3 +1,5 @@
+//View README.md for additional information
+
 //--------------------------------------------//
 //Data creation for the employees to be created
 
