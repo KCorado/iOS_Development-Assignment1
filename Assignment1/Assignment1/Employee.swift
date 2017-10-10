@@ -59,7 +59,7 @@ public class Employee : IPrintable{
     //function to print data (all employees inherit this, will be overridden)
     func returnData() -> String{
         //returns make and plate to be played with later
-        return "null"
+        return "Name: \(self._name)\nYear of Birth: \(calcBirthYear())\nVehicle Information:\n\tMake: \(self._vehicle.make)\n\tPlate: \(self._vehicle.plate)\n"
     }
     
 }
