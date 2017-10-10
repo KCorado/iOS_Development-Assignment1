@@ -39,7 +39,7 @@ public class Intern : Employee {
     
     //overrides returnData to return generic employee data as well as intern data
     override func returnData() -> String {
-        return "\(super.returnData())Employment Information:\n\tStatus: Intern\n\tSalary: \(salary)\n\tSchool Name: \(schoolName)"
+        return "\(super.returnData())Employment Information:\n\tStatus: Intern\n\tSalary: $\(salary)\n\tSchool Name: \(schoolName)"
     }
     
 }

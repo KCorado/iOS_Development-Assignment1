@@ -100,7 +100,7 @@ for i in 0..<aEmp.count {
     totalPR = totalPR + e.calcEarnings()
 }
 
-print ("TOTAL PAYROLL: \(totalPR)")
+print ("TOTAL PAYROLL: $\(totalPR)")
 
 
 

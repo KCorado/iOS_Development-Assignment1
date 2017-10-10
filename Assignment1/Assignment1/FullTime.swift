@@ -40,6 +40,6 @@ public class FullTime : Employee {
     
     //overrides returnData to return generic employee data as well as fulltime data
     override func returnData() -> String {
-        return "\(super.returnData())Employment Information:\n\tStatus: FullTime\n\tEarnings: $\(calcEarnings()) (\(salary) + \(bonus))"
+        return "\(super.returnData())Employment Information:\n\tStatus: FullTime\n\tEarnings: $\(calcEarnings()) (Salary: $\(salary) + Bonus: $\(bonus))"
     }
 }
