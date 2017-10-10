@@ -1,29 +1,29 @@
 public class Intern : Employee {
-    public var schoolName : String
+    private var _schoolName : String
     
     //override constructor
     override init() {
-        schoolName = ""
+        self._schoolName = ""
         super.init()
     }
     
-    //constructor with age and School
-    init(pName: String, pAge: Int, pSchool: String) {
-        schoolName = pSchool
-        super.init(pName, pAge)
+    //getter/setter for school name
+    public var schoolName: String {
+        get {
+            return _schoolName
+        }
+        set(inputSchoolName) {
+            _schoolName = inputSchoolName
+        }
     }
     
-    //constructor with age, school and Vehicle
-    init(pName: String, pAge: Int, pSchool: String, ppV: Vehicle) {
-        schoolName = pSchool
-        super.init(pName, pAge, ppV)
+    override func printMyData() ->String{
+        return returnData()
     }
-
-    //overrides employee printMyData function
-    override func printMyData() {
-        super.printMyData()
-        print ("School Name: \(schoolName)")
- 
+    
+    //overrides returnData to return generic employee data as well as intern data
+    override func returnData() -> String {
+        return "\(super.returnData())Employment Information:\n\tStatus: Intern\n\tSchool Name: \(self.schoolName)"
     }
     
 }
