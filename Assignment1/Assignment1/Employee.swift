@@ -7,7 +7,7 @@ public class Employee : IPrintable{
     init(){
         self._name = ""
         self._age = 0
-        self._vehicle = Vehicle()
+        self._vehicle = nil
     }
     
     
@@ -59,7 +59,13 @@ public class Employee : IPrintable{
     //function to print data (all employees inherit this, will be overridden)
     func returnData() -> String{
         //returns make and plate to be played with later
-        return "Name: \(self._name)\nYear of Birth: \(calcBirthYear())\nVehicle Information:\n\(self.vehicle.printMyData())\n"
+        if(self._vehicle == nil){
+            return "Name: \(self._name)\nYear of Birth: \(calcBirthYear())\n**No Vehicle Info Registered**\n"
+        }
+        else{
+            return "Name: \(self._name)\nYear of Birth: \(calcBirthYear())\nVehicle Information:\n\(self.vehicle.printMyData())\n"
+        }
+        
     }
     
 }
