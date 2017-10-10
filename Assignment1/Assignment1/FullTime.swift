@@ -10,7 +10,7 @@ public class FullTime : Employee {
         super.init();
     }
     
-    //getter/setter for age
+    //getter/setter for salary
     public var salary: Int {
         get {
             return _salary
@@ -20,7 +20,7 @@ public class FullTime : Employee {
         }
     }
     
-    //getter/setter for age
+    //getter/setter for bonus
     public var bonus: Int {
         get {
             return _bonus
