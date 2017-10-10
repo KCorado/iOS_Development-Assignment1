@@ -1,37 +1,46 @@
 public class PartTime: Employee {
+    private var _hourlyRate : Int
+    private var _numHoursWorked : Int
     
-    public var hourlyRate : Int
-    public var numberHoursWorked : Int
-    
-	//basic constructor for PartTime user
+    //basic constructor for PartTime user
     override init() {
-        hourlyRate = 0
-        numberHoursWorked = 0
+        self._hourlyRate = 0
+        self._numHoursWorked = 0
         super.init();
     }
     
-	//constructor without vehicle
-    init(ppName: String, ppAge: Int, pHourlyRate: Int, pNumberHoursWorked: Int) {
-        hourlyRate = pHourlyRate
-        numberHoursWorked = pNumberHoursWorked
-        super.init(ppName, ppAge)
+    //getter/setter for hourly rate
+    public var hourlyRate: Int {
+        get {
+            return _hourlyRate
+        }
+        set(inputHourlyRate) {
+            _hourlyRate = inputHourlyRate
+        }
     }
     
-	//constructor with vehicle
-    init(ppName: String, ppAge: Int, pHourlyRate: Int, pNumberHoursWorked: Int, ppV: Vehicle) {
-        hourlyRate = pHourlyRate
-        numberHoursWorked = pNumberHoursWorked
-        super.init(ppName, ppAge, ppV)
+    //getter/setter for number of hours worked
+    public var numHoursWorked: Int {
+        get {
+            return _numHoursWorked
+        }
+        set(inputNumHoursWorked) {
+            _numHoursWorked = inputNumHoursWorked
+        }
     }
     
     //override the earning calculating
     override func calcEarnings() -> Double {
-        return Double(numberHoursWorked * hourlyRate)
+        return Double(numHoursWorked * hourlyRate)
     }
-    //override the printMyData function
-    override func printMyData() {
-        super.printMyData()
-        print ("Rate: \(hourlyRate)")
-        print ("Hours Worked: \(numberHoursWorked)")
+    
+    override func printMyData() ->String{
+        return returnData()
     }
+    
+    //overrides returnData to return generic employee data as well as partime data
+    override func returnData() -> String {
+        return "\(super.returnData())Employment Information:\n\tStatus: PartTime\n\tEarnings: $\(calcEarnings()) ($\(hourlyRate)/hour * \(numHoursWorked) hours)"
+    }
+    
 }

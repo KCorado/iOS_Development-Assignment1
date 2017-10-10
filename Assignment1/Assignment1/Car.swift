@@ -11,7 +11,7 @@ public class Car : Vehicle{
     public var numWheels:Int{
         get{return _numWheels}
         set{
-            _numWheels = 0
+            _numWheels = 4
         }
     }
     
@@ -28,7 +28,7 @@ public class Car : Vehicle{
     
     //overrides returnData to return generic vehicle data as well as motorcycle data
     override func returnData() -> String {
-        let t = "\(super.returnData())\nNumber of Wheels: \(numWheels)\nRequired Personal Protection: \(requiredHelmet)"
+        let t = "\(super.returnData())\n\tNumber of Wheels: \(numWheels)\n\tRequired Personal Protection: \(requiredHelmet)"
         return t
     }
 }

@@ -1,13 +1,13 @@
 public class Employee : IPrintable{
     private var _name: String
     private var _age: Int
-    private var _vehicle: Vehicle
+    private var _vehicle: Vehicle?
     
     //initializer for class
     init(){
         self._name = ""
         self._age = 0
-        self._vehicle = Vehicle()
+        self._vehicle = nil
     }
     
     
@@ -34,7 +34,7 @@ public class Employee : IPrintable{
     //getter/setter for vehicle
     public var vehicle: Vehicle {
         get {
-            return _vehicle
+            return _vehicle!
         }
         set(inputVehicle) {
             _vehicle = inputVehicle
@@ -59,7 +59,13 @@ public class Employee : IPrintable{
     //function to print data (all employees inherit this, will be overridden)
     func returnData() -> String{
         //returns make and plate to be played with later
-        return "null"
+        if(self._vehicle == nil){
+            return "Name: \(name)\nYear of Birth: \(calcBirthYear())\n**No Vehicle Info Registered**\n"
+        }
+        else{
+            return "Name: \(name)\nYear of Birth: \(calcBirthYear())\nVehicle Information:\n\(vehicle.printMyData())\n"
+        }
+        
     }
     
 }

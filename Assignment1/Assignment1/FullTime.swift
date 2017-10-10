@@ -1,37 +1,45 @@
 public class FullTime : Employee {
-    public var salary : Int
-    public var bonus : Int
     
+    private var _salary: Int
+    private var _bonus: Int
+    
+    //initializer that overrides the Employee init
     override init() {
-        salary = 0
-        bonus = 0
+        self._salary = 0
+        self._bonus = 0
         super.init();
     }
     
-    init(ppName: String, ppAge: Int, pSalary: Int, pBonus: Int) {
-        salary = pSalary
-        bonus = pBonus
-        super.init(ppName, ppAge)
+    //getter/setter for salary
+    public var salary: Int {
+        get {
+            return _salary
+        }
+        set(inputSalary) {
+            _salary = inputSalary
+        }
     }
     
-    init(ppName: String, ppAge: Int, pSalary: Int, pBonus: Int, ppV: Vehicle) {
-        salary = pSalary
-        bonus = pBonus
-        super.init(ppName, ppAge, ppV)
+    //getter/setter for bonus
+    public var bonus: Int {
+        get {
+            return _bonus
+        }
+        set(inputBonus) {
+            _bonus = inputBonus
+        }
     }
-
     
     override func calcEarnings() -> Double {
         return Double(salary + bonus)
     }
     
-    override func printMyData() {
-        super.printMyData()
-        print ("Salary: \(salary)")
-        print ("Bonus: \(bonus)")
+    override func printMyData() ->String{
+        return returnData()
     }
     
-    
-    
-    
+    //overrides returnData to return generic employee data as well as fulltime data
+    override func returnData() -> String {
+        return "\(super.returnData())Employment Information:\n\tStatus: FullTime\n\tEarnings: $\(calcEarnings()) (Salary: $\(salary) + Bonus: $\(bonus))"
+    }
 }
