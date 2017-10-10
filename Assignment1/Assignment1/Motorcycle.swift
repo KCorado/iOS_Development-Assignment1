@@ -28,7 +28,7 @@ public class Motorcycle : Vehicle{
     
     //overrides returnData to return generic vehicle data as well as motorcycle data
 	override func returnData() -> String {
-        let t = "\(super.returnData())\nNumber of Wheels: \(numWheels)\nRequired Personal Protection: \(requireHelmet)"
+        let t = "\(super.returnData())\n\tNumber of Wheels: \(numWheels)\n\tRequired Personal Protection: \(requireHelmet)"
 		return t
 	}
 }

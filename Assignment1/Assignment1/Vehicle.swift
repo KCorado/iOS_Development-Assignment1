@@ -27,7 +27,7 @@ public class Vehicle : IPrintable{
     
     func returnData()->String{
         //returns make and plate to be played with later
-        let t = "make: \(make)\nplate: \(plate)"
+        let t = "\tMake: \(make)\n\tPlate: \(plate)"
         return t
     }
     
