@@ -40,7 +40,7 @@ public class PartTime: Employee {
     
     //overrides returnData to return generic employee data as well as partime data
     override func returnData() -> String {
-        return "\(super.returnData())Employment Information:\n\tStatus: PartTime\n\tEarnings: $\(calcEarnings()) (\(self.hourlyRate)/hour * \(self.numHoursWorked) hours)"
+        return "\(super.returnData())Employment Information:\n\tStatus: PartTime\n\tEarnings: $\(calcEarnings()) (\(hourlyRate)/hour * \(numHoursWorked) hours)"
     }
     
 }

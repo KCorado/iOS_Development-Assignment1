@@ -60,10 +60,10 @@ public class Employee : IPrintable{
     func returnData() -> String{
         //returns make and plate to be played with later
         if(self._vehicle == nil){
-            return "Name: \(self._name)\nYear of Birth: \(calcBirthYear())\n**No Vehicle Info Registered**\n"
+            return "Name: \(name)\nYear of Birth: \(calcBirthYear())\n**No Vehicle Info Registered**\n"
         }
         else{
-            return "Name: \(self._name)\nYear of Birth: \(calcBirthYear())\nVehicle Information:\n\(self.vehicle.printMyData())\n"
+            return "Name: \(name)\nYear of Birth: \(calcBirthYear())\nVehicle Information:\n\(vehicle.printMyData())\n"
         }
         
     }
