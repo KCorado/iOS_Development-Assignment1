@@ -11,7 +11,7 @@ public class Car : Vehicle{
     public var numWheels:Int{
         get{return _numWheels}
         set{
-            _numWheels = 0
+            _numWheels = 4
         }
     }
     
