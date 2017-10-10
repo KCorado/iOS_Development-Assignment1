@@ -122,7 +122,7 @@ print ("TOTAL PAYROLL: \(totalPR)")
 
 /* === The Cornflakes Call to Us ===
 
-▮◯
+▮ O
 \( )\
  /_\
  
